@@ -11,7 +11,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link href="/" className="brand">
-          Vishal <span>/ portfolio</span>
+          S Vishal <span>/ portfolio</span>
         </Link>
         <nav className="nav" aria-label="Primary">
           {navLinks.map((link) => {
@@ -28,4 +28,3 @@ export function SiteHeader() {
     </header>
   );
 }
-

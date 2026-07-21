@@ -7,8 +7,8 @@ export function IntroHero() {
     <section className="hero">
       <Reveal as="div" className="panel hero__copy" delay={0.08} y={28}>
         <div className="stack">
-          <span className="eyebrow">Chennai · Full-stack and applied AI</span>
-          <h1>Vishal</h1>
+          <span className="eyebrow">Chennai | Full-stack and applied AI</span>
+          <h1>S Vishal</h1>
           <p className="lead">
             Building full-stack products, NLP-driven systems, and the occasional
             beyond-code experiment in Blender.
@@ -40,7 +40,7 @@ export function IntroHero() {
           <div className="portrait" />
           <p className="body-copy">
             I like shipping software that has to hold up in real use, then
-            writing clearly about what worked and what did not.
+            writing clearly about the tradeoffs behind it.
           </p>
         </ParallaxPanel>
 
@@ -58,4 +58,3 @@ export function IntroHero() {
     </section>
   );
 }
-

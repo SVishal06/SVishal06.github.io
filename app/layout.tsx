@@ -4,9 +4,9 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Vishal | Full-stack developer and applied AI builder",
+  title: "S Vishal | Full-stack developer and applied AI builder",
   description:
-    "Portfolio of Vishal, a CSE student at Rajalakshmi Engineering College building full-stack products and applied AI systems."
+    "Portfolio of S Vishal, a CSE student at Rajalakshmi Engineering College building full-stack products and applied AI systems."
 };
 
 export default function RootLayout({
