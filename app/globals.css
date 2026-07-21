@@ -246,10 +246,8 @@ textarea {
   border-radius: calc(var(--radius-lg) - 8px);
   overflow: hidden;
   background:
-    radial-gradient(circle at 24% 24%, rgba(255, 255, 255, 0.78), transparent 18%),
-    radial-gradient(circle at 72% 32%, rgba(15, 118, 110, 0.32), transparent 24%),
-    radial-gradient(circle at 62% 74%, rgba(185, 103, 53, 0.22), transparent 26%),
-    linear-gradient(140deg, rgba(15, 118, 110, 0.24), rgba(17, 19, 24, 0.14));
+    linear-gradient(180deg, rgba(8, 10, 14, 0.06), rgba(8, 10, 14, 0.3)),
+    url("/placeholders/hero-visual.png") center/cover no-repeat;
   border: 1px solid rgba(255, 255, 255, 0.6);
   position: relative;
 }
@@ -259,24 +257,21 @@ textarea {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.08), transparent 36%),
-    linear-gradient(rgba(17, 19, 24, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17, 19, 24, 0.03) 1px, transparent 1px);
-  background-size: auto, 100% 2.75rem, 2.75rem 100%;
-  mix-blend-mode: soft-light;
+    radial-gradient(circle at 50% 50%, transparent 0%, rgba(8, 10, 14, 0.12) 72%, rgba(8, 10, 14, 0.34) 100%),
+    linear-gradient(115deg, rgba(255, 255, 255, 0.12), transparent 38%);
 }
 
 .portrait::after {
-  content: "Full-stack systems | Applied AI | Blender";
+  content: "Blender studies";
   position: absolute;
   left: 1rem;
-  right: 1rem;
+  width: fit-content;
   bottom: 1rem;
-  padding: 0.7rem 0.85rem;
+  padding: 0.65rem 0.8rem;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.38);
-  border: 1px solid rgba(255, 255, 255, 0.42);
-  color: rgba(17, 19, 24, 0.72);
+  background: rgba(8, 10, 14, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.86);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -441,7 +436,7 @@ textarea {
   border-radius: calc(var(--radius-lg) - 8px);
   background:
     linear-gradient(145deg, rgba(17, 19, 24, 0.06), rgba(17, 19, 24, 0.02)),
-    url("/placeholders/blender-render-1.png") center/cover no-repeat;
+    url("/placeholders/blender-render-1.svg") center/cover no-repeat;
   border: 1px solid rgba(17, 19, 24, 0.08);
 }
 
