@@ -1,0 +1,14 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#EDE7DC"/>
+  <rect x="72" y="72" width="1456" height="856" rx="48" fill="url(#paint0_linear)"/>
+  <path d="M776 250L973 426L905 495L1000 610L932 678L836 563L768 632L602 466L776 250Z" fill="#F8F4EE"/>
+  <circle cx="1188" cy="286" r="92" fill="#F8F4EE" fill-opacity="0.6"/>
+  <text x="800" y="856" text-anchor="middle" fill="#F8F4EE" font-family="Arial, sans-serif" font-size="40" letter-spacing="3">BLENDER RENDER PLACEHOLDER</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="112" y1="124" x2="1492" y2="878" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111318"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+</svg>
+

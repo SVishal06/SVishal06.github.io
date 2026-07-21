@@ -1,0 +1,12 @@
+.next
+node_modules
+out
+dist
+coverage
+.DS_Store
+*.log
+*.tsbuildinfo
+.agents
+.codex
+portfolio-brief.md
+codex-base-prompt.md
