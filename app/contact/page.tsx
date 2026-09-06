@@ -41,8 +41,7 @@ export default function ContactPage() {
         <Reveal as="div" className="contact-card" amount={0.18}>
           <h2>Send a note</h2>
           <p className="form-note">
-            This form opens a prefilled email draft locally so it stays simple
-            and does not require a backend service yet.
+            Send a message directly from the site, or use one of the direct links alongside it.
           </p>
           <ContactForm />
         </Reveal>
@@ -50,4 +49,3 @@ export default function ContactPage() {
     </main>
   );
 }
-

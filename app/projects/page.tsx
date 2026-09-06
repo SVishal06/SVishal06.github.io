@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PageTitle } from "@/components/page-title";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
-import { blenderProject, featuredProject, remoteSensingProject } from "@/lib/site-data";
+import { blenderProject, c6Venture, featuredProject, remoteSensingProject } from "@/lib/site-data";
 
 export default function ProjectsPage() {
   return (
@@ -25,6 +25,24 @@ export default function ProjectsPage() {
           <ProjectCard project={blenderProject} />
         </Reveal>
       </section>
+
+      <Reveal as="section" className="section venture-section" amount={0.18}>
+        <div className="section-heading">
+          <span className="badge">In progress</span>
+          <h2>Ventures</h2>
+          <p>
+            Early ideas I am validating through research, conversations, and pitch work—not finished products.
+          </p>
+        </div>
+        <article className="card venture-card">
+          <div className="stack">
+            <span className="meta">{c6Venture.status}</span>
+            <h3>{c6Venture.title}</h3>
+            <p className="item-copy">{c6Venture.summary}</p>
+          </div>
+          <span className="venture-note">No public repository yet</span>
+        </article>
+      </Reveal>
 
       <Reveal as="section" className="section card" amount={0.18}>
         <div className="section-heading">
@@ -49,4 +67,3 @@ export default function ProjectsPage() {
     </main>
   );
 }
-

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { PageTitle } from "@/components/page-title";
+import { HashnodePostPreviews } from "@/components/hashnode-post-previews";
 import { Reveal } from "@/components/reveal";
 
 export default function WritingPage() {
@@ -19,18 +19,8 @@ export default function WritingPage() {
           and will continue to track the projects that deserve a longer
           explanation than a portfolio card can hold.
         </p>
-        <div className="card-actions">
-          <Link
-            href="https://vishalbuild.hashnode.dev"
-            target="_blank"
-            rel="noreferrer"
-            className="button"
-          >
-            Visit the blog
-          </Link>
-        </div>
+        <HashnodePostPreviews />
       </Reveal>
     </main>
   );
 }
-

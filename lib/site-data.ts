@@ -2,25 +2,19 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
+  { href: "/achievements", label: "Achievements" },
   { href: "/writing", label: "Writing" },
   { href: "/contact", label: "Contact" }
 ] as const;
 
-export const skills = [
-  "TypeScript",
-  "Next.js",
-  "Flutter",
-  "Java",
-  "Node.js",
-  "Express.js",
-  "Angular",
-  "Tailwind CSS",
-  "PostgreSQL",
-  "MySQL",
-  "MongoDB",
-  "Figma",
-  "Blender",
-  "Google Earth Engine"
+export const skillGroups = [
+  { label: "Languages", skills: ["TypeScript", "Java"] },
+  {
+    label: "Frameworks",
+    skills: ["Next.js", "Flutter", "Node.js", "Express.js", "Angular", "Tailwind CSS"]
+  },
+  { label: "Databases", skills: ["PostgreSQL", "MySQL", "MongoDB"] },
+  { label: "Tools", skills: ["Figma", "Blender", "Google Earth Engine"] }
 ];
 
 export type Project = {
@@ -29,11 +23,14 @@ export type Project = {
   summary: string;
   points: string[];
   link?: string;
+  codeLink?: string;
   secondaryLink?: {
     label: string;
     href: string;
   };
   visual?: boolean;
+  visualSrc?: string;
+  visualAlt?: string;
 };
 
 export const featuredProject: Project = {
@@ -48,6 +45,7 @@ export const featuredProject: Project = {
     "Used a keep-alive cron setup to protect uptime on free-tier hosting."
   ],
   link: "https://fmcg-app-ten.vercel.app",
+  codeLink: "https://github.com/SVishal06/FMGCDT",
   secondaryLink: {
     label: "Read build notes",
     href: "https://vishalbuild.hashnode.dev"
@@ -68,14 +66,21 @@ export const remoteSensingProject: Project = {
 
 export const blenderProject: Project = {
   tag: "Beyond code",
-  title: "Blender 3D Work",
+  title: "1970 Plymouth Barracuda Hemi Replica",
   summary:
-    "Cinematic render studies in Cycles, including a katana model explored through iterative lighting, material tuning, and compositing choices.",
+    "An ongoing, blueprint-accurate 1970 Plymouth Barracuda Hemi replica build in Blender.",
   points: [
-    "Presented as a creative track alongside software work.",
-    "Placeholder render assets are wired in and ready to be replaced with final images.",
-    "Built with a process mindset similar to software iteration."
+    "Modeling the body through clean quad topology, Mirror modifiers, and subdivision surfaces.",
+    "Developing the replica iteratively from reference blueprints and proportion studies."
   ],
-  visual: true
+  visual: true,
+  visualSrc: "/placeholders/barracuda-wip.png",
+  visualAlt: "Work-in-progress screenshot of the 1970 Plymouth Barracuda Hemi replica"
 };
 
+export const c6Venture = {
+  title: "C6",
+  summary:
+    "A carbon-aware compute scheduler for small teams and research labs. C6 would delay non-urgent cloud jobs to lower-carbon grid windows using the Electricity Maps API.",
+  status: "Pitch-deck stage · early-stage concept"
+};

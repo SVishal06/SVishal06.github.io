@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import type { Route } from "next";
 import { navLinks } from "@/lib/site-data";
 
 export function SiteHeader() {
@@ -18,7 +19,7 @@ export function SiteHeader() {
             const isActive = pathname === link.href;
 
             return (
-              <Link key={link.href} href={link.href} data-active={isActive}>
+              <Link key={link.href} href={link.href as Route} data-active={isActive}>
                 {link.label}
               </Link>
             );

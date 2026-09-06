@@ -6,6 +6,8 @@ coverage
 .DS_Store
 *.log
 *.tsbuildinfo
+.env*
+!.env.example
 .agents
 .codex
 portfolio-brief.md

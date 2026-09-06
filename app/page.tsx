@@ -3,7 +3,7 @@ import { IntroHero } from "@/components/intro-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
 import { ParallaxPanel } from "@/components/parallax-panel";
-import { skills } from "@/lib/site-data";
+import { skillGroups } from "@/lib/site-data";
 
 export default function HomePage() {
   return (
@@ -44,13 +44,19 @@ export default function HomePage() {
           title="Tools I work with"
           description="I use the stack that fits the problem, with most of my recent work centered on full-stack web apps, AI workflows, and a few creative tools outside code."
         />
-        <div className="skills-list">
-          {skills.map((skill) => (
-            <span key={skill}>{skill}</span>
+        <div className="skill-groups">
+          {skillGroups.map((group) => (
+            <div className="skill-group" key={group.label}>
+              <h3>{group.label}</h3>
+              <div className="skills-list">
+                {group.skills.map((skill) => (
+                  <span key={skill}>{skill}</span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </Reveal>
     </main>
   );
 }
-
