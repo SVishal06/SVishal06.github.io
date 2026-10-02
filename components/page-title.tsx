@@ -7,10 +7,9 @@ type PageTitleProps = {
 export function PageTitle({ eyebrow, title, description }: PageTitleProps) {
   return (
     <header className="page-title">
-      <span className="eyebrow">{eyebrow}</span>
+      <p className="eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
-      <p>{description}</p>
+      <p className="page-title__lead">{description}</p>
     </header>
   );
 }
-

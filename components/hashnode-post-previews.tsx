@@ -59,7 +59,7 @@ export function HashnodePostPreviews() {
 
   if (!posts || posts.length === 0) {
     return (
-      <div className="card-actions">
+      <p>
         <a
           href={`https://${HASHNODE_PUBLICATION}`}
           target="_blank"
@@ -68,18 +68,18 @@ export function HashnodePostPreviews() {
         >
           Visit the blog
         </a>
-      </div>
+      </p>
     );
   }
 
   return (
-    <div className="post-preview-list">
+    <div className="post-list">
       {posts.map((post) => (
-        <a key={post.url} href={post.url} target="_blank" rel="noreferrer" className="post-preview">
+        <a key={post.url} href={post.url} target="_blank" rel="noreferrer" className="post">
           <span className="meta">{formatDate(post.publishedAt)}</span>
           <h3>{post.title}</h3>
           <p>{post.brief}</p>
-          <span className="ghost-link">Read post <span aria-hidden="true">→</span></span>
+          <span className="text-link">Read post</span>
         </a>
       ))}
     </div>

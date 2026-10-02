@@ -3,31 +3,29 @@ import { Reveal } from "@/components/reveal";
 
 export default function ExperiencePage() {
   return (
-    <main className="page stack">
+    <main className="page">
       <PageTitle
         eyebrow="Experience"
         title="Internship work shaped around contribution, not claims."
         description="I have focused on roles where I can own concrete parts of the system and push useful work across the stack."
       />
 
-      <section className="timeline">
-        <Reveal as="article" className="timeline-item" amount={0.2}>
-          <div className="meta-row">
-            <div>
-              <span className="badge">AI Development Intern</span>
-              <h2>Infivion Technologies</h2>
-            </div>
-            <span className="meta">June 2026 to July 2026</span>
-          </div>
-          <p className="body-copy">
+      <Reveal as="article" className="role" amount={0.15}>
+        <aside className="role__when">
+          <p className="meta">June 2026 to July 2026</p>
+          <p className="meta">AI Development Intern</p>
+        </aside>
+        <div className="role__body">
+          <h2>Infivion Technologies</h2>
+          <p className="lead-copy">
             Contributed to Sentira AI, a conversational wellness companion app,
             with work spanning applied NLP, multilingual UX, and product-facing
             interface decisions.
           </p>
-          <div className="grid-2">
-            <div className="card">
+          <div className="columns">
+            <div>
               <h3>What I worked on</h3>
-              <ul className="project-points">
+              <ul className="plain-list">
                 <li>
                   Designed a specialized NLP pipeline using DistilBERT for
                   emotion classification across six modes.
@@ -39,9 +37,9 @@ export default function ExperiencePage() {
                 <li>Integrated multilingual support into the experience.</li>
               </ul>
             </div>
-            <div className="card">
+            <div>
               <h3>How I contributed</h3>
-              <ul className="project-points">
+              <ul className="plain-list">
                 <li>
                   Built a mood-based color palette system grounded in color
                   psychology.
@@ -57,9 +55,8 @@ export default function ExperiencePage() {
               </ul>
             </div>
           </div>
-        </Reveal>
-      </section>
+        </div>
+      </Reveal>
     </main>
   );
 }
-

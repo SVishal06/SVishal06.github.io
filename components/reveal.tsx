@@ -1,6 +1,6 @@
 "use client";
 
-import { ElementType, ReactNode } from "react";
+import { ElementType, ReactNode, useMemo } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 type RevealProps = {
@@ -16,12 +16,12 @@ export function Reveal({
   children,
   className,
   delay = 0,
-  y = 18,
+  y = 14,
   amount = 0.14,
   as = "div"
 }: RevealProps) {
   const shouldReduceMotion = useReducedMotion();
-  const MotionTag = motion.create(as);
+  const MotionTag = useMemo(() => motion.create(as), [as]);
 
   if (shouldReduceMotion) {
     return <MotionTag className={className}>{children}</MotionTag>;
@@ -33,10 +33,9 @@ export function Reveal({
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount }}
-      transition={{ duration: 0.72, ease: [0.2, 0.8, 0.2, 1], delay }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay }}
     >
       {children}
     </MotionTag>
   );
 }
-

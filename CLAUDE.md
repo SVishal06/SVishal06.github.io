@@ -19,7 +19,7 @@ Personal portfolio: Next.js App Router, TypeScript, Framer Motion. It is a **ful
 - Client-side integrations:
   - `components/contact-form.tsx` posts JSON to Formspree via `NEXT_PUBLIC_FORMSPREE_ENDPOINT`. If the variable is unset, the form goes straight to its error state. Copy `.env.example` for local use.
   - `components/hashnode-post-previews.tsx` fetches posts from the Hashnode publication `vishalbuild.hashnode.dev` in the browser. The Writing page links out to the blog rather than duplicating its content.
-- Images and the resume live in `public/` (`placeholders/`, `resume-placeholder.pdf`).
+- Images and the resume live in `public/` (`placeholders/`, `resume.pdf`).
 
 ## Deployment
 

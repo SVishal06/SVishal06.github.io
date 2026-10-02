@@ -31,6 +31,7 @@ export type Project = {
   visual?: boolean;
   visualSrc?: string;
   visualAlt?: string;
+  visualCaption?: string;
 };
 
 export const featuredProject: Project = {
@@ -66,21 +67,23 @@ export const remoteSensingProject: Project = {
 
 export const blenderProject: Project = {
   tag: "Beyond code",
-  title: "1970 Plymouth Barracuda Hemi Replica",
+  title: "Katana Render in Blender",
   summary:
-    "An ongoing, blueprint-accurate 1970 Plymouth Barracuda Hemi replica build in Blender.",
+    "A cinematic katana render built in Blender and rendered with Cycles.",
   points: [
-    "Modeling the body through clean quad topology, Mirror modifiers, and subdivision surfaces.",
-    "Developing the replica iteratively from reference blueprints and proportion studies."
+    "Modeled the blade, guard, and wrapped handle as a single studio scene.",
+    "Iterated on lighting and compositing across many test renders to get the final look.",
+    "Worked through the scene using a Blender MCP integration."
   ],
   visual: true,
-  visualSrc: "/placeholders/barracuda-wip.png",
-  visualAlt: "Work-in-progress screenshot of the 1970 Plymouth Barracuda Hemi replica"
+  visualSrc: "/placeholders/katana-render.png",
+  visualAlt: "Blender Cycles render of a katana with a polished curved blade and a wrapped handle, lit against a dark background",
+  visualCaption: "Final render."
 };
 
 export const c6Venture = {
   title: "C6",
   summary:
     "A carbon-aware compute scheduler for small teams and research labs. C6 would delay non-urgent cloud jobs to lower-carbon grid windows using the Electricity Maps API.",
-  status: "Pitch-deck stage · early-stage concept"
+  status: "Pitch-deck stage, early-stage concept"
 };

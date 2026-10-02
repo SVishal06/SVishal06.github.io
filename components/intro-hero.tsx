@@ -5,56 +5,39 @@ import { ParallaxPanel } from "@/components/parallax-panel";
 export function IntroHero() {
   return (
     <section className="hero">
-      <Reveal as="div" className="panel hero__copy" delay={0.08} y={28}>
-        <div className="stack">
-          <span className="eyebrow">Chennai | Full-stack and applied AI</span>
-          <h1>S Vishal</h1>
-          <p className="lead">
-            Building full-stack products, NLP-driven systems, and the occasional
-            beyond-code experiment in Blender.
-          </p>
-        </div>
-
-        <div className="stack">
-          <div className="hero__cta">
-            <Link href="/contact" className="button">
-              Contact
-            </Link>
-            <a href="/resume-placeholder.pdf" target="_blank" className="ghost-link">
-              Resume
-            </a>
-          </div>
-          <div className="inline-links">
-            <Link href="/projects" className="ghost-link">
-              Projects
-            </Link>
-            <Link href="/writing" className="ghost-link">
-              Writing
-            </Link>
-          </div>
-        </div>
-      </Reveal>
-
-      <div className="hero__aside">
-        <ParallaxPanel className="panel portrait-card" offset={32}>
-          <div className="portrait" />
-          <p className="body-copy">
-            I like shipping software that has to hold up in real use, then
-            writing clearly about the tradeoffs behind it.
-          </p>
-        </ParallaxPanel>
-
-        <Reveal as="div" className="mini-grid" delay={0.18} y={22}>
-          <div className="stat">
-            <span className="meta">Current focus</span>
-            <strong>Applied AI</strong>
-          </div>
-          <div className="stat">
-            <span className="meta">College CGPA</span>
-            <strong>8.29</strong>
-          </div>
+      <div className="hero__copy">
+        <Reveal as="p" className="eyebrow" delay={0.04}>
+          Chennai | Full-stack and applied AI
+        </Reveal>
+        <Reveal as="h1" delay={0.1} y={22}>
+          S Vishal
+        </Reveal>
+        <Reveal as="p" className="hero__lead" delay={0.18}>
+          Building full-stack products, NLP-driven systems, and the occasional
+          beyond-code experiment in Blender.
+        </Reveal>
+        <Reveal as="div" className="hero__cta" delay={0.26}>
+          <Link href="/contact" className="button">
+            Contact
+          </Link>
+          <a href="/resume.pdf" target="_blank" className="button button--quiet">
+            Resume
+          </a>
         </Reveal>
       </div>
+
+      <Reveal as="div" className="hero__visual" delay={0.14} y={0}>
+        <ParallaxPanel className="hero__frame" offset={18}>
+          <img
+            src="/placeholders/hero-visual.png"
+            alt="Blender render of a TIE fighter style spacecraft against a star field"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+          />
+        </ParallaxPanel>
+        <p className="caption">Blender study.</p>
+      </Reveal>
     </section>
   );
 }

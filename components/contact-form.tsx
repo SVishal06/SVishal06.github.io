@@ -84,7 +84,7 @@ export function ContactForm() {
       </button>
       {status === "success" ? (
         <p className="form-status form-status--success" role="status">
-          Thanks—your message has been sent.
+          Thanks, your message has been sent.
         </p>
       ) : null}
       {status === "error" ? (

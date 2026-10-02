@@ -6,62 +6,49 @@ import { blenderProject, c6Venture, featuredProject, remoteSensingProject } from
 
 export default function ProjectsPage() {
   return (
-    <main className="page stack">
+    <main className="page">
       <PageTitle
         eyebrow="Projects"
         title="A mix of business software, applied geospatial work, and creative experiments."
         description="The strongest thread across these projects is problem framing. I care about constraints, delivery, and whether the end result is actually usable."
       />
 
-      <Reveal as="section" className="section" amount={0.16}>
+      <Reveal as="section" className="project-list" amount={0.1}>
         <ProjectCard project={featuredProject} featured />
+        <ProjectCard project={remoteSensingProject} />
+        <ProjectCard project={blenderProject} />
       </Reveal>
 
-      <section className="grid-2 section">
-        <Reveal as="div" amount={0.18}>
-          <ProjectCard project={remoteSensingProject} />
-        </Reveal>
-        <Reveal as="div" amount={0.18}>
-          <ProjectCard project={blenderProject} />
-        </Reveal>
-      </section>
-
-      <Reveal as="section" className="section venture-section" amount={0.18}>
-        <div className="section-heading">
-          <span className="badge">In progress</span>
-          <h2>Ventures</h2>
-          <p>
-            Early ideas I am validating through research, conversations, and pitch work—not finished products.
+      <Reveal as="section" className="section venture" amount={0.18}>
+        <h2 className="section-title">Ventures</h2>
+        <div className="venture__body">
+          <p className="lead-copy">
+            Early ideas I am validating through research, conversations, and
+            pitch work. These are not finished products.
           </p>
-        </div>
-        <article className="card venture-card">
-          <div className="stack">
-            <span className="meta">{c6Venture.status}</span>
+          <div className="venture__item">
+            <p className="meta">{c6Venture.status}</p>
             <h3>{c6Venture.title}</h3>
-            <p className="item-copy">{c6Venture.summary}</p>
+            <p>{c6Venture.summary}</p>
+            <p className="meta">No public repository yet</p>
           </div>
-          <span className="venture-note">No public repository yet</span>
-        </article>
+        </div>
       </Reveal>
 
-      <Reveal as="section" className="section card" amount={0.18}>
-        <div className="section-heading">
-          <span className="badge">Notes</span>
-          <h2>What I optimize for</h2>
+      <Reveal as="section" className="section about" amount={0.18}>
+        <h2>What I optimize for</h2>
+        <div className="about__body">
           <p>
             I like projects where the technical choices are tied to a real use
             case. That can be uptime on free-tier hosting, tenant separation for
             a business workflow, or a report that turns satellite data into
             something readable.
           </p>
-        </div>
-        <div className="card-actions">
-          <Link href="/writing" className="ghost-link">
-            Read the build notes
-          </Link>
-          <Link href="/contact" className="button">
-            Start a conversation
-          </Link>
+          <p>
+            <Link href="/contact" className="button">
+              Contact
+            </Link>
+          </p>
         </div>
       </Reveal>
     </main>
